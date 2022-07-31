@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  /* overflow: hidden; */
 }
 
 html {
@@ -26,8 +27,13 @@ h3 {
   margin-top: 0;
 }
 
+.mobile-nav-toggle {
+  display: none !important;
+}
+
 .topnav {
   background-color: rgba(0, 0, 0, .75);
+  overflow: hidden;
   backdrop-filter: blur(0.15rem);
   position: fixed;
   top: 0;
@@ -53,6 +59,8 @@ h3 {
   padding: 50px 50px 0px 15px;
 }
 
+
+
 /* nav bar mobile design */
 @media (max-width: 35em) {
   .topnav {
@@ -63,6 +71,11 @@ h3 {
     background: hsl(0 0% 100%/0.1);
     backdrop-filter: blur(0.5rem);
     margin-inline-end: 0.75rem;
+    transform: translateX(100%);
+  }
+
+  .primary-nav[data-visible="true"]{
+    transform: translateX(10%);
   }
 
   .topnav ul {
@@ -72,14 +85,19 @@ h3 {
   }
 
   .mobile-nav-toggle {
-    position: absolute;
+    position: fixed;
+    display: block !important;;
     z-index: 999;
+    color: white;
     background: url();
-    width 1rem;
+    width 4rem;
+    border:0;
     aspect-ratio: 1;
     top:2rem;
     right: 2rem;
   }
+
+
 }
 
 /* containers section  */
