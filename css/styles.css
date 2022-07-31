@@ -3,7 +3,7 @@
 }
 
 html {
-  background-color: rgba(0, 0, 0, 255);
+  background-color: rgba(0, 0, 0, 252);
   scroll-behavior: smooth;
 }
 
@@ -28,15 +28,15 @@ h3 {
 
 .topnav {
   background-color: rgba(0, 0, 0, .75);
+  backdrop-filter: blur(0.15rem);
   position: fixed;
   top: 0;
   width: 100%;
   margin-top: 0em;
-  padding: 0em;
-}
-
-.topnav ul {
-  text-align: right;
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .topnav li {
@@ -51,6 +51,35 @@ h3 {
   font-size: 100%;
   font-weight: bold;
   padding: 50px 50px 0px 15px;
+}
+
+/* nav bar mobile design */
+@media (max-width: 35em) {
+  .topnav {
+    all: unset;
+    position: fixed;
+    inset: 0 0 0 30%;
+    padding: min(20vh, 10rem) 2rem;
+    background: hsl(0 0% 100%/0.1);
+    backdrop-filter: blur(0.5rem);
+    margin-inline-end: 0.75rem;
+  }
+
+  .topnav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .mobile-nav-toggle {
+    position: absolute;
+    z-index: 999;
+    background: url();
+    width 1rem;
+    aspect-ratio: 1;
+    top:2rem;
+    right: 2rem;
+  }
 }
 
 /* containers section  */
@@ -100,16 +129,19 @@ h3 {
   justify-content: center;
   padding: 30px 0;
 }
+
 .timeline {
   width: 90%;
   height: auto;
   margin: 0 auto;
   position: relative;
+  z-index: -1;
 }
 
 .timeline ul {
   list-style: none;
 }
+
 .timeline ul li {
   padding: 20px;
   background-color: #04152b;
@@ -230,7 +262,7 @@ h3 {
     width: 2px;
     height: 100%;
     background-color: red;
-    margin-left:20px;
+    margin-left: 20px;
     margin-top: 10px;
   }
 
@@ -246,12 +278,14 @@ h3 {
     transform: translateX(-30px);
     border-radius: 20px 0px 20px 20px;
   }
+
   .timeline ul li:nth-child(even) {
     float: right;
     clear: left;
     transform: translateX(30px);
     border-radius: 0px 20px 20px 20px;
   }
+
   .timeline ul li::before {
     content: "";
     position: absolute;
@@ -260,20 +294,23 @@ h3 {
     border-radius: 50%;
     background-color: gray;
     top: 0px;
-
   }
+
   .timeline ul li:nth-child(odd)::before {
     transform: translate(50%, -50%);
     right: -30px;
   }
+
   .timeline ul li:nth-child(even)::before {
     transform: translate(-50%, -50%);
     left: -30px;
   }
+
   .timeline-content .date {
     position: absolute;
     top: -30px;
   }
+
   .timeline ul li:hover::before {
     background-color: aqua;
   }
