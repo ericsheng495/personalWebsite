@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  /* overflow: hidden; */
+  /* overflow-x: hidden; */
 }
 
 html {
@@ -66,7 +66,7 @@ h3 {
   .topnav {
     all: unset;
     position: fixed;
-    inset: 0 0 0 30%;
+    inset: 0 0 0 40%;
     padding: min(20vh, 10rem) 2rem;
     background: hsl(0 0% 100%/0.1);
     backdrop-filter: blur(0.5rem);
@@ -74,8 +74,8 @@ h3 {
     transform: translateX(100%);
   }
 
-  .primary-nav[data-visible="true"]{
-    transform: translateX(10%);
+  .primary-navigation[data-visible="true"]{
+    transform: translateX(5%);
   }
 
   .topnav ul {
@@ -86,7 +86,7 @@ h3 {
 
   .mobile-nav-toggle {
     position: fixed;
-    display: block !important;;
+    display: block !important;
     z-index: 999;
     color: white;
     background: url();
