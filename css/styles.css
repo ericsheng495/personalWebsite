@@ -30,7 +30,7 @@ h3 {
 .topnav {
   background-color: rgba(0, 0, 0, .75);
   overflow: hidden;
-  backdrop-filter: blur(0.15rem);
+  backdrop-filter: blur(0.2rem);
   position: fixed;
   top: 0;
   width: 100%;
