@@ -158,30 +158,6 @@ h3 {
   text-transform: uppercase;
 }
 
-.card-container{
-  display: flex;
-  justify-content: center;
-}
-
-
-.card{
-  background: white;
-  margin: 10px;
-  position: relative;
-  align-items: center;
-  border-radius: 20px;
-}
-
-.card h1{
-  text-decoration-color: black;
-  font-family: monospace;
-  font-weight: 500;
-  font-size: 25px;
-  line-height: 30px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
 
 
 .bottom-container {
@@ -311,6 +287,20 @@ h3 {
   .mobile-nav-toggle[aria-expanded="true"]{
   }
 
+  .top-container{
+    margin-left: 0;
+    padding-left: 30px;
+  }
+
+  .middle-container{
+    margin-left: 0;
+    padding-left: 20px;
+  }
+
+  .timeline-container{
+    margin-left: 0;
+  }
+
   .about {
     flex-direction: column;
   }
@@ -320,8 +310,7 @@ h3 {
   }
 
   h3{
-    font-size: 30px;
-    text-decoration: none;
+    font-size: 15px;
   }
 
 
