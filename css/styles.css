@@ -56,7 +56,7 @@ h3 {
 }
 
 .mobile-nav-toggle {
-  display: none;
+  display: none !important;
 }
 
 
@@ -266,6 +266,13 @@ h3 {
 /* Responsive */
 /* desktop --> mobile */
 @media screen and (max-width: 750px) {
+  .body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
   .topnav {
     all: unset;
     position: fixed;
