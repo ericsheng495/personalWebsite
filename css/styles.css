@@ -307,6 +307,17 @@ h3 {
   .about {
     flex-direction: column;
   }
+
+  h1{
+    font-size: 100px;
+  }
+
+  h3{
+    font-size: 30px;
+    text-decoration: none;
+  }
+
+
 }
 
 /* mobile design --> desktop design */
